@@ -1,0 +1,20 @@
+#!/bin/bash
+DefaultQ="workday" #"longlunch"
+NewQueue="tomorrow"
+OutputDir="./HHWWgg_2017"
+WorkDir="./flashgg/HHWWggTestData/"
+let nsubmitjobs=0
+let nfinishedjobs=0
+let ngoodjobs=0
+output=`ls HHWWggTestDataNew/*.out`
+for noutput in $output;do
+#echo "noutput:$noutput"
+a=`grep 'root' $noutput`
+
+if [[ $a -ne 0 ]];then
+echo "$noutput"
+else 
+:
+fi
+done
+
